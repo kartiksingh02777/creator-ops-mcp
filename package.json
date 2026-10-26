@@ -1,0 +1,48 @@
+{
+  "name": "creator-ops-mcp",
+  "version": "0.1.0",
+  "description": "Deterministic creator-ops layer for AI coding agents: turn any transcript into ranked Shorts, safe chapters, high-CTR metadata, and thumbnail briefs—locally, explainably, and without API keys.",
+  "type": "module",
+  "bin": {
+    "creator-ops-mcp": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run typecheck && npm run build && npm test"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "youtube",
+    "shorts",
+    "transcript",
+    "creator",
+    "ai",
+    "claude"
+  ],
+  "author": "Kartik Singh <kartiksingh02777>",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.18.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
